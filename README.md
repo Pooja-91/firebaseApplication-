@@ -1,3 +1,3 @@
-# firebaseApplicationg
+# firebaseApplication
 
 Admin panel
