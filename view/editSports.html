@@ -1,0 +1,19 @@
+<div>
+    <h1>Edit  Sports</h1>
+<table class = "table">
+            <th>sport_id</th>
+            <th>sport_name</th>
+            <th>Edit Sports </th>
+    
+               <tr class = "active" ng-repeat="s in sport">
+                   
+                   <td>{{s.sport_id}}</td>
+                   <td><input type="text" ng-model="s.sport_name"></td>             
+                   <td> <!-- delete a message -->
+        <button ng-click="sport.$save(s)">Click_to_Edit</button></td>
+             <!--  <td>  delete a message 
+        <button ng-click="messages.$remove(data)">Delete Timestamp</button></td>-->
+            </tr>
+   
+   </table>   
+</div>

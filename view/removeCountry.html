@@ -1,0 +1,26 @@
+
+<div class="table-responsive">
+    <h1>Delete  Country</h1>
+ <table class = "table">
+        <th>country_id</th>
+      <th>country_name</th>
+      <th>country_pincode</th>
+      <th>city_name</th>
+      <th>city_code</th>
+      <th>adress_format</th>
+        <th>Edit Country </th>
+               <tr class = "active" ng-repeat="data in country">
+               <td>{{data.country_id}}</td>
+               <td>{{data.country_name}}</td>
+                   <td>{{data.country_pincode}}</td>
+                   <td>{{data.city_name}}</td>
+                   <td>{{data.city_code}}</td>
+                   <td>{{data.adress_format}}</td>
+                   <td> <!-- delete a message -->
+        <button ng-click="country.$remove(data)">Click_to_Delete</button></td>
+             <!--  <td>  delete a message 
+        <button ng-click="messages.$remove(data)">Delete Timestamp</button></td>-->
+            </tr>
+   
+   </table>    
+</div>

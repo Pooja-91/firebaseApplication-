@@ -1,0 +1,37 @@
+
+<div class="table-responsive">
+    <h1>Delete  Events</h1>
+<table class = "table">
+            <th>event_id</th>
+            <th>event_type</th>
+            <th>sport_id</th>
+            <th>event_datetime</th>
+            <th>start_date</th>
+            <th>end_date</th>
+            <th>country_id</th>
+            <th>team-no-needs</th>
+            <th>block_time</th>
+            <th>threshold_close_time</th>
+            <th>Delete Events </th>
+    
+               <tr class = "active" ng-repeat="e in event">
+                   
+                   <td>{{e.event_id}}</td>
+                   <td>{{e.event_type}}</td>
+                   <td>{{e.sport_id}}</td>
+                   <td>{{e.event_datetime}}</td>
+                   <td>{{e.start_date}}</td>
+                   <td>{{e.end_date}}</td>
+                   <td>{{e.country_id}}</td>
+                   <td>{{e.team-no-needs}}</td>
+                   <td>{{e.block_time}}</td>
+                   <td>{{e.threshold_close_time}}</td>
+                 
+                   <td> <!-- delete a message -->
+        <button ng-click="event.$remove(e)">Click_to_Delete</button></td>
+             <!--  <td>  delete a message 
+        <button ng-click="messages.$remove(data)">Delete Timestamp</button></td>-->
+            </tr>
+   
+   </table>    
+</div>

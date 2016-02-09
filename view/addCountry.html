@@ -1,0 +1,33 @@
+  <div class="spinner" ng-hide="loaded"></div>
+            <div ng-cloak="" ng-show="loaded">
+<div class="table-responsive">
+    <h1>Add Country Details</h1>
+ <table class = "table">
+        <th>country_id</th>
+      <th>country_name</th>
+      <th>country_pincode</th>
+      <th>city_name</th>
+      <th>city_code</th>
+      <th>adress_format</th>
+        <th>Add Country </th>
+     <th>Remove Row</th>
+               <tr class = "active" data-ng-repeat="data in choices">
+                    
+     
+              <td><input type="text" ng-model="DT.country_id"></td>
+               <td><input type="text" ng-model="DT.country_name"></td>
+                   <td><input type="text" ng-model="DT.country_pincode"></td>
+                   <td><input type="text" ng-model="DT.city_name"></td>
+                   <td><input type="text" ng-model="DT.city_code"></td>
+                   <td><input type="text" ng-model="DT.adress_format"></td>
+                   <td><button ng-click="country.$add(DT)">Click_to_Add</button></td>
+                  <td><button class="remove" ng-show="$last" ng-click="removeChoice()">Cancel</button></td>
+            </tr>
+   
+   </table>  
+   
+    
+    
+</div>
+<button class="addfields" ng-click="addNewChoice()">Add fields</button>
+</div>

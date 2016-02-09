@@ -1,0 +1,25 @@
+<div class="table-responsive">
+    <h1>Edit  Country Details</h1>
+ <table class = "table">
+        <th>country_id</th>
+      <th>country_name</th>
+      <th>country_pincode</th>
+      <th>city_name</th>
+      <th>city_code</th>
+      <th>adress_format</th>
+        <th>Edit Country </th>
+               <tr class = "active" ng-repeat="data in country">
+               <td>{{data.country_id}}</td>
+               <td><input type="text" ng-model="data.country_name"></td>
+                   <td><input type="text" ng-model="data.country_pincode"></td>
+                   <td><input type="text" ng-model="data.city_name"></td>
+                   <td><input type="text" ng-model="data.city_code"></td>
+                   <td><input type="text" ng-model="data.adress_format"></td>
+                   <td> <!-- delete a message -->
+        <button ng-click="country.$save(data)">Click_to_Edit</button></td>
+             <!--  <td>  delete a message 
+        <button ng-click="messages.$remove(data)">Delete Timestamp</button></td>-->
+            </tr>
+   
+   </table>    
+</div>

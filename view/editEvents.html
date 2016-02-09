@@ -1,0 +1,36 @@
+<div class="table-responsive">
+    <h1>Edit  Events</h1>
+<table class = "table">
+            <th>event_id</th>
+            <th>event_type</th>
+            <th>sport_id</th>
+            <th>event_datetime</th>
+            <th>start_date</th>
+            <th>end_date</th>
+            <th>country_id</th>
+            <th>team-no-needs</th>
+            <th>block_time</th>
+            <th>threshold_close_time</th>
+            <th>Edit Events </th>
+    
+               <tr class = "active" ng-repeat="e in event">
+                   
+                   <td>{{e.event_id}}</td>
+                   <td><input type="text" ng-model="e.event_type"></td>
+                   <td><input type="text" ng-model="e.sport_id"></td>
+                   <td><input type="text" ng-model="e.event_datetime"></td>
+                   <td><input type="text" ng-model="e.start_date"></td>
+                   <td><input type="text" ng-model="e.end_date"></td>
+                   <td><input type="text" ng-model="e.country_id"></td>
+                   <td><input type="text" ng-model="e.team-no-needs"></td>
+                   <td><input type="text" ng-model="e.block_time"></td>
+                   <td><input type="text" ng-model="e.threshold_close_time"></td>
+                 
+                   <td> <!-- delete a message -->
+        <button ng-click="event.$save(e)">Click_to_Edit</button></td>
+             <!--  <td>  delete a message 
+        <button ng-click="messages.$remove(data)">Delete Timestamp</button></td>-->
+            </tr>
+   
+   </table>    
+</div>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
+    <script>
+      
+      // Code goes here
+
+angular.module('myApp', [])
+  .directive('loading', function () {
+      return {
+        restrict: 'E',
+        replace:true,
+        template: '<div class="loading"><img src="http://www.nasa.gov/multimedia/videogallery/ajax-loader.gif" width="20" height="20" />LOADING...</div>',
+        link: function (scope, element, attr) {
+              scope.$watch('loading', function (val) {
+                  if (val)
+                      $(element).show();
+                  else
+                      $(element).hide();
+              });
+        }
+      }
+  })
+  .controller('myController', function($scope, $http) {
+      $scope.cars = [];
+      
+      $scope.clickMe = function() {
+        $scope.loading = true;
+        $http.get('test.json')
+          .success(function(data) {
+            $scope.cars = data[0].cars;
+            $scope.loading = false;
+        });
+      }
+      
+  });
+
+
+      
+      
+      </script>
+  </head>
+
+  <body ng-app="myApp" ng-controller="myController">
+    <h1>Spinner Example</h1>
+    
+    <loading></loading>
+    <div ng-repeat="car in cars">
+      <li>{{car.name}}</li>
+    </div>
+    <button ng-click="clickMe()" class="btn btn-primary">CLICK ME</button>
+    
+  </body>
+
+</html>

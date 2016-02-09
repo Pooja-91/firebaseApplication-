@@ -1,0 +1,20 @@
+<div class="table-responsive">
+    <h1>Delete  Sports</h1>
+
+<table class = "table">
+            <th>sport_id</th>
+            <th>sport_name</th>
+            <th>Delete Sports </th>
+    
+               <tr class = "active" ng-repeat="s in sport">
+                   
+                   <td>{{s.sport_id}}</td>
+                   <td>{{s.sport_name}}</td>             
+                   <td> <!-- delete a message -->
+        <button ng-click="sport.$remove(s)">Click_to_Delete</button></td>
+             <!--  <td>  delete a message 
+        <button ng-click="messages.$remove(data)">Delete Timestamp</button></td>-->
+            </tr>
+   
+   </table>   
+</div>
